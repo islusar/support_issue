@@ -1,0 +1,25 @@
+.row
+  %h4
+    =t('.title')
+- flash.each do |name, msg|
+  = content_tag :div, msg, class: 'alert-box'
+.row
+  .small-12.small-centered.columns
+    =form_for SupportTicket.new, :method => :post do |f|
+      .row
+        .large-6.columns
+          =f.label :user_name, t('.name')
+          =f.text_field :user_name, autofocus: true, placeholder: t('.name')
+        .large-6.columns
+          =f.label t('.email')
+          =f.text_field :email, placeholder: t('.email')
+      .row
+        .large-12.columns
+          =f.label t('.subject')
+          =f.text_field :subject, placeholder: t('.subject')
+      .row
+        .large-12.columns
+          %label
+            =f.label t('.question')
+            =f.text_area :question, placeholder: t('.question')
+      =f.submit(t('.send'), class: 'button')

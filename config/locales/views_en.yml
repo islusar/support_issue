@@ -1,0 +1,9 @@
+en:
+  support_tickets:
+    index:
+      title: Support question
+      name: Name
+      email: Email
+      question: Question
+      send: Send
+      subject: Subject
