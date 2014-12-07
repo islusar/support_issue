@@ -32,10 +32,8 @@ class SupportTicket < ActiveRecord::Base
   end
 
   def generate_code
-    code =[]
-    3.times do |i|
-      code << ('a'..'z').to_a.sample(3).join
-      code << SecureRandom.hex(1) if i != 2
+    code = 5.times.map do |i|
+      i % 2 == 0 ? ('a'..'z').to_a.sample(3).join : SecureRandom.hex(1)
     end
     self.code = code.join('-').upcase
   end
