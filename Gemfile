@@ -18,6 +18,16 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',             group: :doc
 gem 'spring',           group: :development
 
+group :test do
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'capybara-webkit'
+  gem 'factory_girl_rails'
+  gem 'faker'
+  gem 'database_cleaner'
+end
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

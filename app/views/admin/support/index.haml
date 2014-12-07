@@ -1,4 +1,4 @@
-%dl.sub-nav
+%dl.sub-nav.filters
   - @filters.each do |filter|
     - dd_class = filter == @filter ? 'active' : ''
     = content_tag(:dd, class: dd_class) do

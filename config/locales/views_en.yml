@@ -10,7 +10,9 @@ en:
       search_block:
         search: Search
       edit:
-       update: Update
+        update: Update
+      tickets:
+        edit: Edit
   support_ticket:
     index:
       title: Support question

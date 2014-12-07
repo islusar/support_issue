@@ -22,11 +22,13 @@
         %tr
           %td= t('.admin')
           %td
-            = f.select(:admin_id, Admin.all.collect {|u| [u.email, u.id]})
+            - options = options_for_select(Admin.all.collect {|u| [u.email, u.id]}, @ticket.admin_id)
+            = f.select(:admin_id, options)
         %tr
           %td= t(".status")
           %td
-            = f.select(:status, SupportTicket::STATUSES.collect {|u| [t("support.support_ticket_status_#{u}"), u]})
+            - options = options_for_select(SupportTicket::STATUSES.collect {|u| [t("support.support_ticket_status_#{u}"), u]}, @ticket.status)
+            = f.select(:status, options)
         %tr
           %td= t('.answer')
           %td= f.text_area(:answer)
