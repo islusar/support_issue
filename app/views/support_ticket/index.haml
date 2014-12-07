@@ -5,7 +5,7 @@
   = content_tag :div, msg, class: 'alert-box'
 .row
   .small-12.small-centered.columns
-    =form_for SupportTicket.new, :method => :post do |f|
+    =form_for :support_ticket, :url => support_ticket_index_path , :method => :post do |f|
       .row
         .large-6.columns
           =f.label :user_name, t('.name')

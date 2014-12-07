@@ -1,5 +1,17 @@
 en:
-  support_tickets:
+  admin:
+    supports:
+      index:
+        status_1: Waiting for Staff Response
+        status_2: Waiting for Customer
+        status_3: On Hold
+        status_4: Cancelled
+    support:
+      search_block:
+        search: Search
+      edit:
+       update: Update
+  support_ticket:
     index:
       title: Support question
       name: Name

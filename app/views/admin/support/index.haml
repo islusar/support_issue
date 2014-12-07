@@ -1,0 +1,10 @@
+%dl.sub-nav
+  - @filters.each do |filter|
+    - dd_class = filter == @filter ? 'active' : ''
+    = content_tag(:dd, class: dd_class) do
+      =link_to(t(".filter_#{filter}"), admin_support_index_path(filter: filter))
+.content
+  .left
+    =render 'tickets'
+  =render 'search_block'
+

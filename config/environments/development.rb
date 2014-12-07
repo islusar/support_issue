@@ -33,7 +33,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
       address:              'smtp.gmail.com',
       port:                 587,
-      domain:               'my_app.com',
+      domain:               '127.0.0.1:3000',
       user_name:            'dsfaeaea8@gmail.com',
       password:             'TestTest',
       authentication:       'plain',
@@ -42,7 +42,7 @@ Rails.application.configure do
 
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_url_options = { :host => "www.my_app.com" }
+  config.action_mailer.default_url_options = { :host => "127.0.0.1:3000" }
   #config.action_mailer.default_options = {from: 'no-reply@example.com'}
 
   # Raises error for missing translations

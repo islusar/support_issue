@@ -1,10 +1,5 @@
-!!!
-%html
-  %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-  %body
-    %h1
-      Welcome to somesite.com, #{@ticket.user_name}
-    %p
-      Thank you for question. You can find your question by this
-      =link_to('link', support_tickets_url(@ticket.code))
+%h1
+  Welcome to somesite.com, #{@ticket['user_name']}
+%p
+  Thank you for question. You can find your question by this
+  =link_to('link', support_ticket_url(@ticket['code']))

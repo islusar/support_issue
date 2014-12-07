@@ -8,7 +8,7 @@ class CreateSupportTickets < ActiveRecord::Migration
       t.string :code, null: false
       t.string :answer
       t.integer :admin_id
-      t.integer :status
+      t.integer :status, default: 1
       t.timestamps
     end
 

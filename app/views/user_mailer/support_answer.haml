@@ -1,0 +1,9 @@
+%h1
+  somesite.com
+%p
+  Your question -
+  = @ticket['question']
+%p
+  Support answer -
+  = @ticket['answer']
+  =link_to('link', support_ticket_url(@ticket['code']))

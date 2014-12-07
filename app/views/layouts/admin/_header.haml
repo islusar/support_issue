@@ -1,0 +1,14 @@
+%nav.top-bar.foundation-bar{"data-topbar" => ""}
+  %ul.title-area
+    %li.name
+      %span
+        %h1
+          =link_to t(:admin_panel), admins_path
+
+  %section.top-bar-section
+    %ul.left
+      %li
+        =link_to t('.support'), admin_support_index_path
+    %ul.right
+      %li
+        =link_to t('.logout'), destroy_admin_session_path, method: :delete

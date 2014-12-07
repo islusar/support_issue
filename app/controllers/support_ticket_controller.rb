@@ -1,11 +1,11 @@
-class SupportTicketsController < ApplicationController
+class SupportTicketController < ApplicationController
   def index
   end
 
   def create
     ticket = SupportTicket.new(ticket_params)
     flash[:notice] = ticket.save ? t(:created_successfully) : ticket.errors.full_messages.first
-    redirect_to support_tickets_path
+    redirect_to support_ticket_index_path
   end
 
   def show

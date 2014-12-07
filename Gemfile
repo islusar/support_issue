@@ -11,6 +11,9 @@ gem 'devise'
 gem 'prototype-rails'
 gem 'foundation-rails'
 gem 'turbolinks'
+gem 'will_paginate'
+gem 'sidekiq'
+gem 'redis'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',             group: :doc
 gem 'spring',           group: :development

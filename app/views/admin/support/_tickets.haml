@@ -1,0 +1,22 @@
+%table
+  %tr
+    %th= t('.code')
+    %th= t('.user_name')
+    %th= t('.subject')
+    %th= t('.question')
+    %th= t('.admin')
+    %th= t('.links')
+  - @tickets.each do |ticket|
+    %tr
+      %td= ticket.code
+      %td= ticket.user_name
+      %td= ticket.subject
+      %td= ticket.question
+      %td
+        - if ticket.admin
+          = ticket.admin.email
+        - else
+          = link_to(t('.take_ownership'), take_ownership_admin_support_path(id: ticket.id))
+      %td
+        = link_to(t('.edit'), edit_admin_support_path(ticket.id))
+  =will_paginate @tickets

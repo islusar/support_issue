@@ -21,3 +21,9 @@
 
 en:
   hello: "Hello world"
+  support:
+    support_ticket_status_1: wait staff
+    support_ticket_status_2: wait customer
+    support_ticket_status_3: on hold
+    support_ticket_status_4: canceled
+    support_ticket_status_5: comleted

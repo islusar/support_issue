@@ -1,0 +1,36 @@
+.row
+  %h4
+    =t('.title')
+- flash.each do |name, msg|
+  = content_tag :div, msg, class: 'alert-box'
+.row
+  .small-12.small-centered.columns
+    =form_for @ticket, :url => admin_support_path(@ticket.id), :method => :put do |f|
+      %table
+        %tr
+          %td= t('.user_name')
+          %td= @ticket.user_name
+        %tr
+          %td= t('.user_email')
+          %td= @ticket.email
+        %tr
+          %td= t('.subject')
+          %td= @ticket.subject
+        %tr
+          %td= t('.question')
+          %td= @ticket.question
+        %tr
+          %td= t('.admin')
+          %td
+            = f.select(:admin_id, Admin.all.collect {|u| [u.email, u.id]})
+        %tr
+          %td= t(".status")
+          %td
+            = f.select(:status, SupportTicket::STATUSES.collect {|u| [t("support.support_ticket_status_#{u}"), u]})
+        %tr
+          %td= t('.answer')
+          %td= f.text_area(:answer)
+        %tr
+          %td
+            = link_to(t('.back'), admin_support_index_path)
+            =f.submit(t('.update'), class: 'button')

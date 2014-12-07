@@ -3,9 +3,9 @@
     %li.name
       %span
         %h1
-          %a{:href => "#"} Company Name
+          =link_to t(:company_name), '#'
   %section.top-bar-section
     / Right Nav Section
     %ul.right
       %li
-        %a{:href => "/admin", :target => "_blank"} Login
+        =link_to t('.admin_panel'), admins_path

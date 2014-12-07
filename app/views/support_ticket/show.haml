@@ -1,0 +1,23 @@
+.row
+  %h4= t('.your_question')
+  .small-12.small-centered.columns
+    =form_for @ticket, :method => :PUT do |f|
+      %table
+        %tr
+          %td= t('.user_name')
+          %td= @ticket.user_name
+        %tr
+          %td= t('.user_email')
+          %td= @ticket.email
+        %tr
+          %td= t('.subject')
+          %td= @ticket.subject
+        %tr
+          %td= t('.status')
+          %td= t("support.support_ticket_status_#{@ticket.status}")
+        %tr
+          %td= t('.answer')
+          %td= @ticket.answer
+        %tr
+          %td= t('.question')
+          %td= @ticket.question
